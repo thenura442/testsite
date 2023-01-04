@@ -1,1 +1,35 @@
-<p>registration works!</p>
+
+<div style="margin-left: 30%;" class="container">
+  <h2> Registration </h2>
+  <br><br>
+  <form style="width:50%;" #form ="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="form-group">
+      <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required name="Name" [(ngModel)]="usersettings.Name">
+      </div><br>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="Email" [(ngModel)]="usersettings.Email">
+      </div><br>
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" class="form-control" id="id" name="Id" [(ngModel)]="usersettings.Id">
+      </div><br>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id="password" name="Password" [(ngModel)]="usersettings.Password">
+      </div><br>
+      <div class="form-group">
+        <label for="password2">Retype Password</label>
+        <input type="text" class="form-control" id="password2" name="Password2" [(ngModel)]="Password2">
+      </div><br>
+
+      <div [hidden]="!postError" class="alert alert-danger">
+        {{ postErrorMessage }}
+      </div>
+
+      <button class="btn btn-primary">
+        Send
+      </button><br>
+  </form>
+</div>
