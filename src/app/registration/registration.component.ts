@@ -10,6 +10,7 @@ import { RegisterService } from '../services/register/register.service';
 })
 export class RegistrationComponent {
 
+  text: string = "Test Registration";
   Password2: string = '123';
 
   Orginalusersettings: User = {
