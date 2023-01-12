@@ -31,6 +31,7 @@ export class RegistrationComponent {
     this.postErrorMessage = errorResponse.error.errorMessage;
   }
 
+
   onSubmit(form: NgForm) {
     console.log('in on submit : ',form.valid);
 
@@ -43,7 +44,7 @@ export class RegistrationComponent {
     }
     else {
       this.postError = true;
-      this.postErrorMessage = "Please Fiix the above Errors!";
+      this.postErrorMessage = "Please Fix the above Errors!";
     }
   }
 
