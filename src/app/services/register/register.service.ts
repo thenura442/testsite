@@ -12,7 +12,7 @@ export class RegisterService {
 
   postUserSettingsForm(userSettings: User) : Observable<User> {
 
-    return this.http.post<User>('http://localhost:9000/api/staff/register',userSettings);
+    return this.http.post<User>('https://test-server2-ox4p.onrender.com/api/staff/register',userSettings);
 
     // return of(userSettings);
   }
